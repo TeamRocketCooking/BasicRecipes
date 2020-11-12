@@ -1,10 +1,11 @@
 Original App Design Project - README Template
 ===
 
-# Baisc Recipes
+# Basic Recipes
 
 ## Table of Contents
 1. [Overview](#Overview)
+Basic Recipe
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
@@ -16,10 +17,15 @@ Original App Design Project - README Template
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:**
+Instructional, Food
 - **Mobile:**
+Specificly for mobile apps 
 - **Story:**
+First time home cooks and those living by themselves don't know how to make basic dishes. Tells you in no uncertain terms what to do.
 - **Market:**
+Young people and new cooks living alone wanting clear instructions without filler.
 - **Habit:**
+People need to eat. This allows them to cook for themselves daily with basic instructions for basic meals.
 - **Scope:**
 
 ## Product Spec
