@@ -63,8 +63,7 @@ People who are new to cooking, or who cook rarely and need clear and concise coo
 * Favorite Recipes Screen -> Specific Recipe Screen
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+![](temp2.png)
 
 ### [BONUS] Digital Wireframes & Mockups
 
