@@ -1,7 +1,7 @@
 Original App Design Project - README Template
 ===
 
-# APP_NAME_HEREdfgdfg dg sfg dfgsd gsdfg f gfdfgds
+# Baisc Recipes
 
 ## Table of Contents
 1. [Overview](#Overview)
