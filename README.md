@@ -1,19 +1,14 @@
-Original App Design Project - README Template
-===
-
 # Basic Recipes
 
 ## Table of Contents
 1. [Overview](#Overview)
-Basic Recipe
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
 
 ## Overview
 ### Description
-[Description of your app]
-
+An App that gives very clear and concise cooking instructions for staples like chicken, pancakes, eggs, etc. There is a paid version which offers simple additions to the recepies, likes spice mixes for chicken. It also has a measurement calculator and substitutes for missing ingredients.
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:**
@@ -25,8 +20,9 @@ First time home cooks and those living by themselves don't know how to make basi
 - **Market:**
 Young people and new cooks living alone wanting clear instructions without filler.
 - **Habit:**
-People need to eat. This allows them to cook for themselves daily with basic instructions for basic meals.
+People need to eat, and this app can help people get comfortable with cooking. This allows them to cook for themselves daily with basic instructions for basic meals.
 - **Scope:**
+People who are new to cooking, or who cook rarely and need clear and concise cooking instructions. This May be college students, or those who are living alone for the first time.
 
 ## Product Spec
 
@@ -34,39 +30,37 @@ People need to eat. This allows them to cook for themselves daily with basic ins
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* List of items you can learn to cook, and their tutorials
+* You can favorite items, and they appear in a favorite items tab
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can pay $1.99 to get paid features
+* Paid feature: can access basic recipe entensions like spice mixes to improve their cooking in an uncomplicated manner
+* Paid feature: It can auto-adjust ingrediant amounts based on user input
+* Paid feature: Suggest substituitons if you are missing any of the ingrediants from a recipe.
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Food Catagory Screen/Tab
+   * Specific recipes in that food catagory
+* Favorite Recipes Screen/Tab
+   * A subcatagory screen
+* Subcatagory Screen
+   * A specific recipe screen
+* Specific Recipe Screen
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Food Catagory Screen
+* Favorite Recipes
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Food Catagory Screen -> Subcatagory Screen -> Specific Recipe Screen
+* Favorite Recipes Screen -> Specific Recipe Screen
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
@@ -80,7 +74,3 @@ People need to eat. This allows them to cook for themselves daily with basic ins
 [This section will be completed in Unit 9]
 ### Models
 [Add table of models]
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
