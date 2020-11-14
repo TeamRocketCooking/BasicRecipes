@@ -8,7 +8,8 @@
 
 ## Overview
 ### Description
-An App that gives very clear and concise cooking instructions for staples like chicken, pancakes, eggs, etc. There is a paid version which offers simple additions to the recepies, likes spice mixes for chicken. It also has a measurement calculator and substitutes for missing ingredients.
+The main idea is that you don't have to search for basic, "How do I cook *blank*." The app just tells you a number of ways to prepare the raw ingredient.
+The app gives very clear and concise cooking instructions for staples like chicken, pancakes, eggs, etc. There is a paid version which offers simple additions like basic, reliable recepies. It also has a measurement calculator and substitutes for missing ingredients.
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:**
