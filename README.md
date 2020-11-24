@@ -7,6 +7,13 @@
 2. [Schema](#Schema)
 
 ## Overview
+### App Walkthrough GIF
+Here's a walkthrough of the current application:
+
+![](Guide.gif)
+
+GIF created with [Gifski](https://apps.apple.com/us/app/gifski/id1351639930?mt=12).
+
 ### Description
 The main idea is that you don't have to search for basic, "How do I cook *blank*." The app just tells you a number of ways to prepare the raw ingredient.
 The app gives very clear and concise cooking instructions for staples like chicken, pancakes, eggs, etc. There is a paid version which offers simple additions like basic, reliable recepies. It also has a measurement calculator and substitutes for missing ingredients.
