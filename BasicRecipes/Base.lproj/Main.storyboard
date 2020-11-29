@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoh-S4-ruL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoh-S4-ruL">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,7 +47,7 @@
                             <outlet property="delegate" destination="NZw-88-2x0" id="KRN-36-fOn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="gFv-QU-zru"/>
+                    <navigationItem key="navigationItem" title="Food Categories" id="gFv-QU-zru"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpp-zG-VGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,11 +97,11 @@
                         <viewLayoutGuide key="safeArea" id="xOZ-Bd-Y2M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TiO-XJ-gkE"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="TiO-XJ-gkE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkw-Ih-wjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1978.2608695652175" y="552.71739130434787"/>
+            <point key="canvasLocation" x="1751" y="553"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="enh-aU-eMJ">
@@ -113,8 +113,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="zNy-vj-HIj" kind="relationship" relationship="viewControllers" id="RZ7-eI-Y0N"/>
                         <segue destination="xeL-XG-V7d" kind="relationship" relationship="viewControllers" id="24h-Sj-mA4"/>
+                        <segue destination="zNy-vj-HIj" kind="relationship" relationship="viewControllers" id="RZ7-eI-Y0N"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEG-HD-lmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -218,7 +218,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0f-DV-ECp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071.0144927536232" y="552.71739130434787"/>
+            <point key="canvasLocation" x="1006" y="553"/>
         </scene>
     </scenes>
     <resources>
