@@ -33,7 +33,6 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
             parseObjects.append(PFObject.init(withoutDataWithClassName: "Food", objectId: favoriteFood))
         }
         
-        //PFObject.fetchAll(inBackground: <#T##[PFObject]?#>, block: <#T##PFArrayResultBlock?##PFArrayResultBlock?##([Any]?, Error?) -> Void#>)
         PFObject.fetchAll(inBackground: parseObjects) { (fetchedFoods, error) in
             self.foods = fetchedFoods as! [PFObject]
             self.tableView.reloadData()
@@ -41,7 +40,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        foods.count
+        return foods.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

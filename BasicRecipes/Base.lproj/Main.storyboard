@@ -160,7 +160,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="bLi-xo-KKY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreparationCell" rowHeight="150" id="bLi-xo-KKY" customClass="PreparationCell" customModule="BasicRecipes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bLi-xo-KKY" id="PBq-QA-7nm">
@@ -181,6 +181,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="preparationImage" destination="P3Q-Wi-Cmh" id="pLF-ll-71w"/>
+                                            <outlet property="preparationLabel" destination="JuN-OE-log" id="IOp-Kl-i6h"/>
                                             <segue destination="0pE-dd-8fy" kind="presentation" id="pnn-Ls-vgv"/>
                                         </connections>
                                     </tableViewCell>
@@ -190,6 +192,9 @@
                         <viewLayoutGuide key="safeArea" id="VGi-yk-uLv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="EIL-qH-UgA" id="csN-sM-axN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qcb-96-Lgv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
