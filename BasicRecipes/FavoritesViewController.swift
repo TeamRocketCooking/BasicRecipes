@@ -34,7 +34,11 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         PFObject.fetchAll(inBackground: parseObjects) { (fetchedFoods, error) in
-            self.foods = fetchedFoods as! [PFObject]
+            if let objects = fetchedFoods as? [PFObject] {
+                self.foods = objects
+            } else {
+                print("Invalid objectId stored in favorites array")
+            }
             self.tableView.reloadData()
         }
     }
@@ -69,8 +73,8 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         let indexPath = tableView.indexPath(for: cell)!
         
         // Pass the selected movie to the details view controller
-        let detailsViewController = segue.destination as! FoodViewController
-        detailsViewController.food = foods[indexPath.row]
+        let foodViewController = segue.destination as! FoodViewController
+        foodViewController.food = foods[indexPath.row]
         
         tableView.deselectRow(at: indexPath, animated: true)
     }

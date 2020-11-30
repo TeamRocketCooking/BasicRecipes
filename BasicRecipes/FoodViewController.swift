@@ -29,7 +29,11 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         PFObject.fetchAll(inBackground: parseObjects) { (fetchedPreparations, error) in
-            self.preparations = fetchedPreparations as! [PFObject]
+            if let objects = fetchedPreparations as? [PFObject] {
+                self.preparations = objects
+            } else {
+                print("Invalid objectId stored in preparations array")
+            }
             self.tableView.reloadData()
         }
     }
@@ -53,14 +57,21 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let preparationViewController = segue.destination as! PreparationViewController
+        preparationViewController.preparation = preparations[indexPath.row]
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
+    
 
 }
