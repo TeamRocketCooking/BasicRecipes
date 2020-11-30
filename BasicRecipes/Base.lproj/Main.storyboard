@@ -38,7 +38,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="JlL-lM-wBP" kind="presentation" id="6ek-EP-FTJ"/>
+                                    <segue destination="JlL-lM-wBP" kind="presentation" modalPresentationStyle="fullScreen" id="6ek-EP-FTJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +56,7 @@
         <!--Favorites-->
         <scene sceneID="6fz-fw-urM">
             <objects>
-                <viewController id="Iri-oy-h2B" userLabel="Favorites" sceneMemberID="viewController">
+                <viewController id="Iri-oy-h2B" userLabel="Favorites" customClass="FavoritesViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iOl-EP-j9I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,26 +66,32 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="125" id="14a-B6-Uz0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodCell" rowHeight="125" id="14a-B6-Uz0" customClass="FoodCell" customModule="BasicRecipes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="14a-B6-Uz0" id="LuP-aO-xf4">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="14a-B6-Uz0" id="LuP-aO-xf4" customClass="FoodCell" customModule="BasicRecipes" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFK-o1-FUm">
-                                                    <rect key="frame" x="299" y="36" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFK-o1-FUm">
+                                                    <rect key="frame" x="204" y="0.0" width="210" height="125"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIm-qi-Uca">
-                                                    <rect key="frame" x="0.0" y="-2" width="191" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="207" height="125"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outlet property="foodImage" destination="rIm-qi-Uca" id="IUO-fK-64r"/>
+                                            <outlet property="foodLabel" destination="jFK-o1-FUm" id="kpo-ON-mi6"/>
+                                            <segue destination="JlL-lM-wBP" kind="presentation" modalPresentationStyle="fullScreen" id="D9P-PO-80g"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -97,11 +103,14 @@
                         <viewLayoutGuide key="safeArea" id="xOZ-Bd-Y2M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Favorites" id="TiO-XJ-gkE"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="Jty-4r-x60"/>
+                    <connections>
+                        <outlet property="tableView" destination="CsB-rS-4BO" id="SeU-gB-JIy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkw-Ih-wjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1751" y="553"/>
+            <point key="canvasLocation" x="1750.7246376811595" y="552.71739130434787"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="enh-aU-eMJ">
@@ -121,11 +130,11 @@
             </objects>
             <point key="canvasLocation" x="19" y="166"/>
         </scene>
-        <!--Item-->
+        <!--Foods-->
         <scene sceneID="2nh-dF-xhz">
             <objects>
                 <navigationController id="xeL-XG-V7d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="eQq-It-8Fo"/>
+                    <tabBarItem key="tabBarItem" title="Foods" id="eQq-It-8Fo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9mh-Ea-BPX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -141,9 +150,9 @@
         <!--Food View Controller-->
         <scene sceneID="sW8-5v-e03">
             <objects>
-                <viewController id="JlL-lM-wBP" userLabel="Food View Controller" sceneMemberID="viewController">
+                <viewController id="JlL-lM-wBP" userLabel="Food View Controller" customClass="FoodViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="66W-FS-DFH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EIL-qH-UgA">
@@ -201,11 +210,11 @@
             </objects>
             <point key="canvasLocation" x="3283" y="-145"/>
         </scene>
-        <!--Item-->
+        <!--Favorites-->
         <scene sceneID="Xnd-IT-oal">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zNy-vj-HIj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Eft-Ot-Hp4"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="Eft-Ot-Hp4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oAt-Zb-Ih6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -221,6 +230,9 @@
             <point key="canvasLocation" x="1006" y="553"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="D9P-PO-80g"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

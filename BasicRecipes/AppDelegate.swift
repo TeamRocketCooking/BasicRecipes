@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let parseConfig = ParseClientConfiguration {
+            $0.applicationId = "vpYzXRbxOo4jZdhf2gMjik7YRpRVdykXjpgeiR6e"
+            $0.clientKey = "1srcoOP9bMrAoyNY1tPsX1nyCXuFjUobgfuKjjWQ"
+            $0.server = "https://parseapi.back4app.com"
+        }
+        Parse.initialize(with: parseConfig)
+        
+        var favorites = [String]()
+        favorites.append("zKuAoTRB6D")
+        favorites.append("hDkSO2ErZJ")
+        favorites.append("rGVsNse1BK")
+        
+        UserDefaults.standard.set(favorites, forKey: "favorites")
+        
         return true
     }
 

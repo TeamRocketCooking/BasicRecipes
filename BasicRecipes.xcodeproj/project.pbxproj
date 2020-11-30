@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A7828BF25759E70004A3738 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7828BE25759E70004A3738 /* FavoritesViewController.swift */; };
+		2A7828C42575A212004A3738 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7828C32575A212004A3738 /* FoodCell.swift */; };
+		2A7828C92575AABC004A3738 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7828C82575AABC004A3738 /* FoodViewController.swift */; };
 		54A8D0EF255CC46D00D71AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8D0EE255CC46D00D71AF3 /* AppDelegate.swift */; };
 		54A8D0F1255CC46D00D71AF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8D0F0255CC46D00D71AF3 /* SceneDelegate.swift */; };
 		54A8D0F3255CC46D00D71AF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8D0F2255CC46D00D71AF3 /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 /* Begin PBXFileReference section */
 		0F7B41463B80A177902EC8C9 /* Pods-BasicRecipesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRecipesTests.debug.xcconfig"; path = "Target Support Files/Pods-BasicRecipesTests/Pods-BasicRecipesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1899F95B45021D329F93C8E8 /* Pods-BasicRecipes-BasicRecipesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRecipes-BasicRecipesUITests.release.xcconfig"; path = "Target Support Files/Pods-BasicRecipes-BasicRecipesUITests/Pods-BasicRecipes-BasicRecipesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2A7828BE25759E70004A3738 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		2A7828C32575A212004A3738 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		2A7828C82575AABC004A3738 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		361108017956BCCEF18D507C /* Pods_BasicRecipes_BasicRecipesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicRecipes_BasicRecipesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A8D0EB255CC46D00D71AF3 /* BasicRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A8D0EE255CC46D00D71AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +139,9 @@
 				54A8D0F7255CC47000D71AF3 /* Assets.xcassets */,
 				54A8D0F9255CC47000D71AF3 /* LaunchScreen.storyboard */,
 				54A8D0FC255CC47000D71AF3 /* Info.plist */,
+				2A7828BE25759E70004A3738 /* FavoritesViewController.swift */,
+				2A7828C32575A212004A3738 /* FoodCell.swift */,
+				2A7828C82575AABC004A3738 /* FoodViewController.swift */,
 			);
 			path = BasicRecipes;
 			sourceTree = "<group>";
@@ -165,7 +174,6 @@
 				0F7B41463B80A177902EC8C9 /* Pods-BasicRecipesTests.debug.xcconfig */,
 				ED2FE0096C77098CCBB6C16B /* Pods-BasicRecipesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -409,6 +417,9 @@
 			files = (
 				54A8D0F3255CC46D00D71AF3 /* ViewController.swift in Sources */,
 				54A8D0EF255CC46D00D71AF3 /* AppDelegate.swift in Sources */,
+				2A7828C42575A212004A3738 /* FoodCell.swift in Sources */,
+				2A7828BF25759E70004A3738 /* FavoritesViewController.swift in Sources */,
+				2A7828C92575AABC004A3738 /* FoodViewController.swift in Sources */,
 				54A8D0F1255CC46D00D71AF3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
