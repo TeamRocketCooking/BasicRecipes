@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoh-S4-ruL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoh-S4-ruL">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--Category View Controller-->
         <scene sceneID="nVY-fl-G3o">
             <objects>
-                <viewController id="1tU-g3-SV9" customClass="CategoryViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="1tU-g3-SV9" customClass="CategoryViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xfm-Xv-vAM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
                                         <connections>
                                             <outlet property="categoryLabel" destination="qSg-m8-wFr" id="wQy-OV-Zox"/>
                                             <outlet property="foodImageView" destination="DRM-sk-3Bh" id="XO9-OZ-wDO"/>
-                                            <segue destination="JlL-lM-wBP" kind="presentation" modalPresentationStyle="fullScreen" id="6ek-EP-FTJ"/>
+                                            <segue destination="JlL-lM-wBP" kind="show" id="6ek-EP-FTJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -65,7 +65,7 @@
         <!--Favorites-->
         <scene sceneID="6fz-fw-urM">
             <objects>
-                <viewController id="Iri-oy-h2B" userLabel="Favorites" customClass="FavoritesViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Iri-oy-h2B" userLabel="Favorites" customClass="FavoritesViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iOl-EP-j9I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
                                         <connections>
                                             <outlet property="foodImage" destination="rIm-qi-Uca" id="IUO-fK-64r"/>
                                             <outlet property="foodLabel" destination="jFK-o1-FUm" id="kpo-ON-mi6"/>
-                                            <segue destination="JlL-lM-wBP" kind="presentation" modalPresentationStyle="fullScreen" id="D9P-PO-80g"/>
+                                            <segue destination="JlL-lM-wBP" kind="show" id="D9P-PO-80g"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -155,7 +155,7 @@
         <!--Food View Controller-->
         <scene sceneID="sW8-5v-e03">
             <objects>
-                <viewController id="JlL-lM-wBP" userLabel="Food View Controller" customClass="FoodViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="JlL-lM-wBP" userLabel="Food View Controller" customClass="FoodViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="66W-FS-DFH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +188,7 @@
                                         <connections>
                                             <outlet property="preparationImage" destination="P3Q-Wi-Cmh" id="pLF-ll-71w"/>
                                             <outlet property="preparationLabel" destination="JuN-OE-log" id="IOp-Kl-i6h"/>
-                                            <segue destination="0pE-dd-8fy" kind="presentation" id="pnn-Ls-vgv"/>
+                                            <segue destination="0pE-dd-8fy" kind="show" id="pnn-Ls-vgv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -197,6 +197,7 @@
                         <viewLayoutGuide key="safeArea" id="VGi-yk-uLv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3df-cd-b9u"/>
                     <connections>
                         <outlet property="tableView" destination="EIL-qH-UgA" id="csN-sM-axN"/>
                     </connections>
@@ -208,9 +209,9 @@
         <!--Preperation View Controller-->
         <scene sceneID="bju-wn-qEN">
             <objects>
-                <viewController id="0pE-dd-8fy" userLabel="Preperation View Controller" customClass="PreparationViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="0pE-dd-8fy" userLabel="Preperation View Controller" customClass="PreparationViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NSB-wF-orp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQT-Mi-DhE">
@@ -224,6 +225,7 @@
                         <viewLayoutGuide key="safeArea" id="Ntk-WI-T6C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xwn-b9-Ap8"/>
                     <connections>
                         <outlet property="nameLabel" destination="gQT-Mi-DhE" id="J2Y-H9-eBU"/>
                     </connections>
