@@ -51,6 +51,12 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    // Added height to the table view cells 
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
@@ -58,7 +64,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         let indexPath = tableView.indexPath(for: cell)!
         
         let preparationViewController = segue.destination as! PreparationViewController
-        categoryViewController.preparation = categories[indexPath.row]
+        //categoryViewController.preparation = categories[indexPath.row]
         
         tableView.deselectRow(at: indexPath, animated: true)
     }

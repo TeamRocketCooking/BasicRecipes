@@ -62,6 +62,12 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    // Added height to the table view cells
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

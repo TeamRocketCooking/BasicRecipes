@@ -57,6 +57,12 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
+    // Added height to the table view cells
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
     
     // MARK: - Navigation
 
