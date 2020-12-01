@@ -1,5 +1,5 @@
 //
-//  FoodCell.swift
+//  FavoriteFoodCell.swift
 //  BasicRecipes
 //
 //  Created by Yanni Speron on 11/30/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FoodCell: UITableViewCell {
+class FavoriteFoodCell: UITableViewCell {
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var foodLabel: UILabel!
     

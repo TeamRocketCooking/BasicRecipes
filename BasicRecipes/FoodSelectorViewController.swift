@@ -1,19 +1,20 @@
 //
-//  CategoryViewController.swift
+//  FoodSelectorViewController.swift
 //  BasicRecipes
 //
-//  Created by Sherb on 11/30/20.
+//  Created by Yanni Speron on 11/30/20.
 //
 
 import UIKit
 import Parse
 import AlamofireImage
 
-class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class FoodSelectorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var categories = [PFObject]()
+    var category: PFObject!
+    var foods = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,47 +23,53 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.dataSource = self
 
         // Do any additional setup after loading the view.
-        let query = PFQuery(className:"Category")
-        query.findObjectsInBackground {( fetchedCategories: [PFObject]?, error: Error? ) in
+        let query = PFQuery(className:"Food")
+        query.whereKey("category", equalTo: category.objectId!)
+        query.findObjectsInBackground {( fetchedFoods: [PFObject]?, error: Error? ) in
             if let error = error {
                 print(error.localizedDescription)
-            } else if let unwrappedCategories = fetchedCategories {
-                self.categories = unwrappedCategories
+            } else if let unwrappedFoods = fetchedFoods {
+                self.foods = unwrappedFoods
             }
             self.tableView.reloadData()
         }
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        return foods.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCell") as! FoodCell
         
-        let category = categories[indexPath.row]
-        cell.categoryLabel.text = category["name"] as? String
+        let food = foods[indexPath.row]
+        cell.foodLabel.text = food["name"] as? String
         
-        let imageFile = category["image"] as! PFFileObject
+        let imageFile = food["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
-        cell.categoryImage.af.setImage(withURL: url)
+        cell.foodImage.af.setImage(withURL: url)
         
         return cell
     }
-    
+
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for: cell)!
         
-        let foodSelectorViewController = segue.destination as! FoodSelectorViewController
-        foodSelectorViewController.category = categories[indexPath.row]
+        // Pass the selected movie to the details view controller
+        let foodViewController = segue.destination as! FoodViewController
+        foodViewController.food = foods[indexPath.row]
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
 
 }

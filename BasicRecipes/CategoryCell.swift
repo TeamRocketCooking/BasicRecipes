@@ -2,15 +2,14 @@
 //  CategoryCell.swift
 //  BasicRecipes
 //
-//  Created by Sherb on 11/30/20.
+//  Created by Yanni Speron on 11/30/20.
 //
 
 import UIKit
 
 class CategoryCell: UITableViewCell {
-
-    @IBOutlet weak var CategoryImageView: UIImageView!
     
+    @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     
     override func awakeFromNib() {

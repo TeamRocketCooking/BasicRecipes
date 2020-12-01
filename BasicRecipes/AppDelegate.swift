@@ -23,9 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(with: parseConfig)
         
         var favorites = [String]()
-        favorites.append("zKuAoTRB6D")
-        favorites.append("hDkSO2ErZJ")
         favorites.append("rGVsNse1BK")
+        favorites.append("hDkSO2ErZJ")
+        favorites.append("zKuAoTRB6D")
         
         UserDefaults.standard.set(favorites, forKey: "favorites")
         
