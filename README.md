@@ -10,8 +10,11 @@
 ### App Walkthrough GIF
 Here's a walkthrough of the current application:
 Unit 10
+
 ![](unit10.gif)
+
 Unit 9
+
 ![](Guide.gif)
 
 GIF created with [Gifski](https://apps.apple.com/us/app/gifski/id1351639930?mt=12).
