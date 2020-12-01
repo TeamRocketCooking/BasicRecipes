@@ -20,6 +20,8 @@
 		54A8D0FB255CC47000D71AF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A8D0F9255CC47000D71AF3 /* LaunchScreen.storyboard */; };
 		54A8D106255CC47000D71AF3 /* BasicRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8D105255CC47000D71AF3 /* BasicRecipesTests.swift */; };
 		54A8D111255CC47000D71AF3 /* BasicRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8D110255CC47000D71AF3 /* BasicRecipesUITests.swift */; };
+		7A3D9FE12575E38600596E45 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D9FE02575E38600596E45 /* CategoryViewController.swift */; };
+		7A3D9FE62575E63000596E45 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D9FE52575E63000596E45 /* CategoryCell.swift */; };
 		97443F7BDE8D661E492D0523 /* Pods_BasicRecipesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0326E212C85DE7FA82BAF4 /* Pods_BasicRecipesTests.framework */; };
 		C8510598E1A9FC959EDBA9E1 /* Pods_BasicRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA5A1D6D36597EA2B4CA5B0 /* Pods_BasicRecipes.framework */; };
 		F8800ED32D5A8AB6C73F9D26 /* Pods_BasicRecipes_BasicRecipesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361108017956BCCEF18D507C /* Pods_BasicRecipes_BasicRecipesUITests.framework */; };
@@ -66,6 +68,8 @@
 		54A8D110255CC47000D71AF3 /* BasicRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRecipesUITests.swift; sourceTree = "<group>"; };
 		54A8D112255CC47000D71AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7355B6A6135E6570A2521FB9 /* Pods-BasicRecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRecipes.release.xcconfig"; path = "Target Support Files/Pods-BasicRecipes/Pods-BasicRecipes.release.xcconfig"; sourceTree = "<group>"; };
+		7A3D9FE02575E38600596E45 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		7A3D9FE52575E63000596E45 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		8AA5A1D6D36597EA2B4CA5B0 /* Pods_BasicRecipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicRecipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		937314E17F3EB2448871632C /* Pods-BasicRecipes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRecipes.debug.xcconfig"; path = "Target Support Files/Pods-BasicRecipes/Pods-BasicRecipes.debug.xcconfig"; sourceTree = "<group>"; };
 		E6DC9C657EFED764A4487750 /* Pods-BasicRecipes-BasicRecipesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRecipes-BasicRecipesUITests.debug.xcconfig"; path = "Target Support Files/Pods-BasicRecipes-BasicRecipesUITests/Pods-BasicRecipes-BasicRecipesUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				2A7828C82575AABC004A3738 /* FoodViewController.swift */,
 				2A7828CD2575B3D0004A3738 /* PreparationCell.swift */,
 				2A7828D22575B5CB004A3738 /* PreparationViewController.swift */,
+				7A3D9FE02575E38600596E45 /* CategoryViewController.swift */,
+				7A3D9FE52575E63000596E45 /* CategoryCell.swift */,
 			);
 			path = BasicRecipes;
 			sourceTree = "<group>";
@@ -428,7 +434,9 @@
 				2A7828BF25759E70004A3738 /* FavoritesViewController.swift in Sources */,
 				2A7828C92575AABC004A3738 /* FoodViewController.swift in Sources */,
 				2A7828D32575B5CB004A3738 /* PreparationViewController.swift in Sources */,
+				7A3D9FE12575E38600596E45 /* CategoryViewController.swift in Sources */,
 				54A8D0F1255CC46D00D71AF3 /* SceneDelegate.swift in Sources */,
+				7A3D9FE62575E63000596E45 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
