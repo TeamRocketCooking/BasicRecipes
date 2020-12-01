@@ -38,16 +38,22 @@ People who are new to cooking, or who cook rarely and need clear and concise coo
 
 **Required Must-have Stories**
 
-* List of items you can learn to cook, and their tutorials
-* You can favorite items, and they appear in a favorite items tab
+- [ ] List of items you can learn to cook, and their tutorials
+- [ ] User can favorite foods
+- [x] App has category, food, and favorite page
+- [x] App successfully use back4app parse server for data
+- [ ] User stays logged in across restarts
+- [ ] User can log out
+- [ ] User select food types
+- [ ] User can select specific foods
 
 **Optional Nice-to-have Stories**
 
-* Search bar on each catagory page
-* User can pay $1.99 to get paid features
-* Paid feature: can access basic recipe entensions like spice mixes to improve their cooking in an uncomplicated manner
-* Paid feature: It can auto-adjust ingrediant amounts based on user input
-* Paid feature: Suggest substituitons if you are missing any of the ingrediants from a recipe.
+- [ ] Search bar on each catagory page
+- [ ] User can pay $1.99 to get paid features
+- [ ] Paid feature: can access basic recipe entensions like spice mixes to improve their cooking in an uncomplicated manner
+- [ ] Paid feature: It can auto-adjust ingrediant amounts based on user input
+- [ ] Paid feature: Suggest substituitons if you are missing any of the ingrediants from a recipe.
 
 ### 2. Screen Archetypes
 
