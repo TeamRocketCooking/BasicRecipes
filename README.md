@@ -9,6 +9,7 @@
 ## Overview
 ### App Walkthrough GIF
 Here's a walkthrough of the current application:
+
 Unit 10
 
 ![](unit10.gif)
