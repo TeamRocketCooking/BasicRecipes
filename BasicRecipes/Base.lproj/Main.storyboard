@@ -207,6 +207,7 @@
                                         <connections>
                                             <outlet property="foodImage" destination="QgX-Lt-1qm" id="Fit-G7-e5p"/>
                                             <outlet property="foodLabel" destination="So4-8K-Q1b" id="hw1-uE-jph"/>
+                                            <segue destination="JlL-lM-wBP" kind="show" id="lZm-ko-A00"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -346,10 +347,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQT-Mi-DhE">
-                                <rect key="frame" x="56" y="80" width="42" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHa-dZ-4cc">
+                                <rect key="frame" x="20" y="44" width="374" height="287"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NIi-dE-EId">
+                                <rect key="frame" x="20" y="339" width="374" height="348"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preparations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwt-QU-7kg">
+                                <rect key="frame" x="20" y="44" width="374" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -357,14 +367,10 @@
                         <viewLayoutGuide key="safeArea" id="Ntk-WI-T6C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xwn-b9-Ap8"/>
-                    <connections>
-                        <outlet property="nameLabel" destination="gQT-Mi-DhE" id="J2Y-H9-eBU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdr-T1-VQt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4051" y="-145"/>
+            <point key="canvasLocation" x="4050.7246376811599" y="-145.10869565217394"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="Xnd-IT-oal">
@@ -386,6 +392,9 @@
             <point key="canvasLocation" x="1006" y="553"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lZm-ko-A00"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="imageedit_1_6876702367" width="828" height="296"/>
         <systemColor name="systemBackgroundColor">
