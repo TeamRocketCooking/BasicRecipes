@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8F6F277C-CCF8-46EE-9B54-56AEBAF6C59C"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "205D87A4-BA99-4469-9253-5DE2203D2D87"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BasicRecipes/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "onSignUpButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "205D87A4-BA99-4469-9253-5DE2203D2D87 - b89cbf5fd1648d77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BasicRecipes.LoginViewController.onSignUpButton(Any) -&gt; ()"
+                  moduleName = "BasicRecipes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sherb/Documents/IOS%20Codepath/BasicRecipes/BasicRecipes/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1273">
+               </Location>
+               <Location
+                  uuid = "205D87A4-BA99-4469-9253-5DE2203D2D87 - 6b3a54f2e1557b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BasicRecipes.LoginViewController.onSignUpButton(Any) -&gt; ()"
+                  moduleName = "BasicRecipes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sherb/Documents/IOS%20Codepath/BasicRecipes/BasicRecipes/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "189">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

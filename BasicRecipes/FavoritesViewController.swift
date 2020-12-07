@@ -43,6 +43,13 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
+    @IBAction func onLogoutButton(_ sender: Any) {
+        
+            PFUser.logOutInBackground()
+            // remember that the user logged out
+            UserDefaults.standard.set(false, forKey: "userLoggedIn")
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
     }
