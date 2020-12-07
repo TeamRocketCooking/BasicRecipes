@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6du-gQ-8j1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoh-S4-ruL">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lmk-c6-Qf1">
-                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lmk-c6-Qf1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="149" id="P3H-QB-Lln" customClass="CategoryCell" customModule="BasicRecipes" customModuleProvider="target">
@@ -55,7 +54,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="wp8-96-ecd" secondAttribute="bottom" id="qSk-uS-5lS"/>
                                                 <constraint firstItem="7oS-wc-Lg5" firstAttribute="leading" secondItem="4SG-7Z-bmO" secondAttribute="leading" id="vYo-Qg-LhL"/>
                                                 <constraint firstItem="QTz-1W-YsT" firstAttribute="top" secondItem="4SG-7Z-bmO" secondAttribute="topMargin" constant="10" id="vf3-GV-w0h"/>
-                                                <constraint firstAttribute="trailing" secondItem="wp8-96-ecd" secondAttribute="trailing" id="wtn-2u-AGR"/>
+                                                <constraint firstAttribute="trailing" secondItem="wp8-96-ecd" secondAttribute="trailing" constant="-25" id="wtn-2u-AGR"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="QTz-1W-YsT" secondAttribute="bottom" constant="10" id="xyI-LX-MZs"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -70,6 +69,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ARp-Ut-zQg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lmk-c6-Qf1" firstAttribute="leading" secondItem="ARp-Ut-zQg" secondAttribute="leading" id="CAz-v6-yRu"/>
+                            <constraint firstAttribute="bottom" secondItem="lmk-c6-Qf1" secondAttribute="bottom" id="HlI-f6-AeC"/>
+                            <constraint firstItem="lmk-c6-Qf1" firstAttribute="top" secondItem="Xfm-Xv-vAM" secondAttribute="top" id="Pib-QT-3oW"/>
+                            <constraint firstItem="lmk-c6-Qf1" firstAttribute="trailing" secondItem="ARp-Ut-zQg" secondAttribute="trailing" id="u66-kO-uBA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Food Categories" id="W0x-FG-qtf"/>
                     <connections>
@@ -88,9 +93,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-5U-Srj">
-                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-5U-Srj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodCell" rowHeight="148" id="fOl-18-oqT" customClass="FoodCell" customModule="BasicRecipes" customModuleProvider="target">
@@ -114,7 +118,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageedit_1_6876702367" translatesAutoresizingMaskIntoConstraints="NO" id="uDu-xk-pY5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="439" height="148"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -126,7 +130,7 @@
                                                 <constraint firstItem="fJD-T2-Nhr" firstAttribute="leading" secondItem="JTx-qC-CMN" secondAttribute="trailing" constant="10" id="aeu-Vf-M1u"/>
                                                 <constraint firstItem="JTx-qC-CMN" firstAttribute="top" secondItem="lgh-gs-0fL" secondAttribute="top" id="hLs-YR-g2W"/>
                                                 <constraint firstItem="fJD-T2-Nhr" firstAttribute="top" secondItem="lgh-gs-0fL" secondAttribute="topMargin" constant="10" id="hiC-Yh-Lbs"/>
-                                                <constraint firstAttribute="trailing" secondItem="uDu-xk-pY5" secondAttribute="trailing" id="lF3-N4-w4D"/>
+                                                <constraint firstAttribute="trailing" secondItem="uDu-xk-pY5" secondAttribute="trailing" constant="-25" id="lF3-N4-w4D"/>
                                                 <constraint firstItem="uDu-xk-pY5" firstAttribute="top" secondItem="lgh-gs-0fL" secondAttribute="top" id="lhB-dL-Fgn"/>
                                                 <constraint firstItem="uDu-xk-pY5" firstAttribute="leading" secondItem="lgh-gs-0fL" secondAttribute="leading" id="u2T-KL-9eW"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="fJD-T2-Nhr" secondAttribute="trailing" constant="10" id="x2A-1I-Omh"/>
@@ -143,6 +147,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gmg-ML-pSt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yd6-5U-Srj" firstAttribute="leading" secondItem="gmg-ML-pSt" secondAttribute="leading" id="WIf-IW-iNS"/>
+                            <constraint firstItem="Yd6-5U-Srj" firstAttribute="trailing" secondItem="gmg-ML-pSt" secondAttribute="trailing" id="fwL-GC-3Gs"/>
+                            <constraint firstItem="Yd6-5U-Srj" firstAttribute="top" secondItem="hw7-hu-455" secondAttribute="top" id="gBR-bQ-ogS"/>
+                            <constraint firstAttribute="bottom" secondItem="Yd6-5U-Srj" secondAttribute="bottom" id="mCG-Fa-5Nh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Foods" id="iz5-L6-J8z"/>
                     <connections>
@@ -280,9 +290,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EIL-qH-UgA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EIL-qH-UgA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreparationCell" rowHeight="153" id="bLi-xo-KKY" customClass="PreparationCell" customModule="BasicRecipes" customModuleProvider="target">
@@ -306,12 +315,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageedit_1_6876702367" translatesAutoresizingMaskIntoConstraints="NO" id="YxV-EQ-FTV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="389" height="153"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="JuN-OE-log" firstAttribute="top" secondItem="PBq-QA-7nm" secondAttribute="topMargin" constant="10" id="8YW-xV-nvt"/>
-                                                <constraint firstAttribute="trailing" secondItem="YxV-EQ-FTV" secondAttribute="trailing" constant="25" id="9cr-4K-r2a"/>
+                                                <constraint firstAttribute="trailing" secondItem="YxV-EQ-FTV" secondAttribute="trailing" id="9cr-4K-r2a"/>
                                                 <constraint firstItem="P3Q-Wi-Cmh" firstAttribute="top" secondItem="PBq-QA-7nm" secondAttribute="top" id="JBi-V2-M38"/>
                                                 <constraint firstItem="YxV-EQ-FTV" firstAttribute="leading" secondItem="PBq-QA-7nm" secondAttribute="leading" id="OZA-01-OVH"/>
                                                 <constraint firstItem="P3Q-Wi-Cmh" firstAttribute="leading" secondItem="PBq-QA-7nm" secondAttribute="leading" id="Sw8-NZ-feA"/>
@@ -335,6 +344,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VGi-yk-uLv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="EIL-qH-UgA" secondAttribute="bottom" id="6Q8-Bw-FLk"/>
+                            <constraint firstItem="EIL-qH-UgA" firstAttribute="trailing" secondItem="VGi-yk-uLv" secondAttribute="trailing" id="B1U-2u-Zl1"/>
+                            <constraint firstItem="EIL-qH-UgA" firstAttribute="leading" secondItem="VGi-yk-uLv" secondAttribute="leading" id="T6j-a4-x4t"/>
+                            <constraint firstItem="EIL-qH-UgA" firstAttribute="top" secondItem="66W-FS-DFH" secondAttribute="top" id="mvB-St-Qix"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Preparations" id="3df-cd-b9u"/>
                     <connections>
@@ -516,7 +531,6 @@
                     <connections>
                         <outlet property="emailField" destination="qyz-8y-h2n" id="6rE-my-gkL"/>
                         <outlet property="passwordField" destination="xa0-E7-SG3" id="0HH-E0-IQ0"/>
-                        <outlet property="usernameField" destination="qyz-8y-h2n" id="gxc-PB-Or6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Xq-ic-K7n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -525,7 +539,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lZm-ko-A00"/>
+        <segue reference="dnr-NO-Xkx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="imageedit_1_6876702367" width="828" height="296"/>
