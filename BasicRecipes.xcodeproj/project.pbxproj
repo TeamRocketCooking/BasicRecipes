@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0903966F257C67A500707670 /* PreparationStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903966E257C67A500707670 /* PreparationStepCell.swift */; };
+		0920D2C32581BBB000A842B2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920D2C22581BBB000A842B2 /* AccountViewController.swift */; };
 		2A335D3A2575FFFC00F15251 /* FoodSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A335D392575FFFC00F15251 /* FoodSelectorViewController.swift */; };
 		2A335D422576037300F15251 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A335D412576037300F15251 /* CategoryCell.swift */; };
 		2A335D472576076E00F15251 /* FavoriteFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A335D462576076E00F15251 /* FavoriteFoodCell.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		0903966E257C67A500707670 /* PreparationStepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationStepCell.swift; sourceTree = "<group>"; };
+		0920D2C22581BBB000A842B2 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0F7B41463B80A177902EC8C9 /* Pods-BasicRecipesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRecipesTests.debug.xcconfig"; path = "Target Support Files/Pods-BasicRecipesTests/Pods-BasicRecipesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1899F95B45021D329F93C8E8 /* Pods-BasicRecipes-BasicRecipesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRecipes-BasicRecipesUITests.release.xcconfig"; path = "Target Support Files/Pods-BasicRecipes-BasicRecipesUITests/Pods-BasicRecipes-BasicRecipesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2A335D392575FFFC00F15251 /* FoodSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelectorViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				2A335D5925760BAB00F15251 /* FoodCell.swift */,
 				0903966E257C67A500707670 /* PreparationStepCell.swift */,
 				7A98018E257E5D7400889B6E /* LoginViewController.swift */,
+				0920D2C22581BBB000A842B2 /* AccountViewController.swift */,
 			);
 			path = BasicRecipes;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				2A7828C92575AABC004A3738 /* FoodViewController.swift in Sources */,
 				2A7828D32575B5CB004A3738 /* PreparationViewController.swift in Sources */,
 				7A3D9FE12575E38600596E45 /* CategoryViewController.swift in Sources */,
+				0920D2C32581BBB000A842B2 /* AccountViewController.swift in Sources */,
 				2A335D3A2575FFFC00F15251 /* FoodSelectorViewController.swift in Sources */,
 				54A8D0F1255CC46D00D71AF3 /* SceneDelegate.swift in Sources */,
 				2A335D422576037300F15251 /* CategoryCell.swift in Sources */,

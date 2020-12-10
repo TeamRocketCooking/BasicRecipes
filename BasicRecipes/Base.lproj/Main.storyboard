@@ -13,11 +13,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="1tU-g3-SV9" customClass="CategoryViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xfm-Xv-vAM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lmk-c6-Qf1">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="149" id="P3H-QB-Lln" customClass="CategoryCell" customModule="BasicRecipes" customModuleProvider="target">
@@ -90,11 +90,11 @@
             <objects>
                 <viewController id="fDI-Lw-aTr" customClass="FoodSelectorViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hw7-hu-455">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-5U-Srj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodCell" rowHeight="148" id="fOl-18-oqT" customClass="FoodCell" customModule="BasicRecipes" customModuleProvider="target">
@@ -168,11 +168,20 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="Iri-oy-h2B" userLabel="Favorites" customClass="FavoritesViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iOl-EP-j9I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dwadawdawdaw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEq-X0-SeM">
+                                <rect key="frame" x="20" y="343" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="o4U-by-ic0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Nd-cB-kv0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteFoodCell" rowHeight="113" id="27d-PB-rx9" customClass="FavoriteFoodCell" customModule="BasicRecipes" customModuleProvider="target">
@@ -229,18 +238,27 @@
                             <constraint firstItem="xOZ-Bd-Y2M" firstAttribute="trailing" secondItem="9Nd-cB-kv0" secondAttribute="trailing" id="BRy-vR-M42"/>
                             <constraint firstItem="9Nd-cB-kv0" firstAttribute="leading" secondItem="xOZ-Bd-Y2M" secondAttribute="leading" id="J0u-cU-kc9"/>
                             <constraint firstItem="xOZ-Bd-Y2M" firstAttribute="bottom" secondItem="9Nd-cB-kv0" secondAttribute="bottom" id="NZj-0A-qY1"/>
+                            <constraint firstAttribute="trailing" secondItem="kEq-X0-SeM" secondAttribute="trailing" constant="20" symbolic="YES" id="b4I-d8-Jya"/>
+                            <constraint firstItem="kEq-X0-SeM" firstAttribute="leading" secondItem="iOl-EP-j9I" secondAttribute="leading" constant="20" symbolic="YES" id="mo5-aI-Tto"/>
+                            <constraint firstItem="kEq-X0-SeM" firstAttribute="centerY" secondItem="iOl-EP-j9I" secondAttribute="centerY" id="sP9-ml-ZmW"/>
                             <constraint firstItem="9Nd-cB-kv0" firstAttribute="top" secondItem="iOl-EP-j9I" secondAttribute="top" id="vsa-Aj-RWM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="Jty-4r-x60">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="g2z-Hy-cxV">
+                        <barButtonItem key="rightBarButtonItem" image="person.crop.circle" catalog="system" id="bp7-ST-EMD">
                             <connections>
-                                <action selector="onLogoutButton:" destination="Iri-oy-h2B" id="23s-Li-kte"/>
+                                <segue destination="e4T-gO-Ps6" kind="popoverPresentation" popoverAnchorBarButtonItem="bp7-ST-EMD" id="W0T-fF-tfe">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="notLoggedInLabel" destination="kEq-X0-SeM" id="opE-wL-Azb"/>
                         <outlet property="tableView" destination="9Nd-cB-kv0" id="fao-Rh-ZjO"/>
+                        <segue destination="6du-gQ-8j1" kind="popoverPresentation" identifier="favoritesToLogin" popoverAnchorView="iOl-EP-j9I" id="6Lx-Th-Rnm">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkw-Ih-wjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -271,7 +289,7 @@
                 <navigationController id="xeL-XG-V7d" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Foods" id="eQq-It-8Fo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9mh-Ea-BPX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -287,11 +305,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="JlL-lM-wBP" userLabel="Food View Controller" customClass="FoodViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="66W-FS-DFH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EIL-qH-UgA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreparationCell" rowHeight="153" id="bLi-xo-KKY" customClass="PreparationCell" customModule="BasicRecipes" customModuleProvider="target">
@@ -365,18 +383,18 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="0pE-dd-8fy" userLabel="Preperation View Controller" customClass="PreparationViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NSB-wF-orp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eHa-dZ-4cc">
-                                <rect key="frame" x="0.0" y="56" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="5wS-sl-l6D"/>
                                     <constraint firstAttribute="height" constant="150" id="VcG-4n-Ph8"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NIi-dE-EId">
-                                <rect key="frame" x="0.0" y="206" width="414" height="461"/>
+                                <rect key="frame" x="0.0" y="194" width="414" height="493"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreparationStepCell" rowHeight="63" id="Y3P-Ia-RAf" customClass="PreparationStepCell" customModule="BasicRecipes" customModuleProvider="target">
@@ -417,7 +435,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwt-QU-7kg">
-                                <rect key="frame" x="0.0" y="56" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -466,7 +484,7 @@
                     <tabBarItem key="tabBarItem" title="Favorites" id="Eft-Ot-Hp4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oAt-Zb-Ih6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -483,7 +501,7 @@
             <objects>
                 <viewController id="6du-gQ-8j1" customClass="LoginViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K4L-t7-NyI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5J-n7-Gbu">
@@ -496,14 +514,13 @@
                                 </state>
                                 <connections>
                                     <action selector="onLoginButton:" destination="6du-gQ-8j1" eventType="touchUpInside" id="mQt-d4-68l"/>
-                                    <segue destination="qoh-S4-ruL" kind="presentation" identifier="loginSegue" id="ZRt-ux-KiR"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qyz-8y-h2n">
                                 <rect key="frame" x="167" y="182" width="170" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8A-KR-icu">
                                 <rect key="frame" x="78" y="189" width="41" height="21"/>
@@ -523,7 +540,7 @@
                                 <rect key="frame" x="167" y="254" width="170" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0x0-bk-zEL">
                                 <rect key="frame" x="142" y="476" width="147" height="79"/>
@@ -537,8 +554,17 @@
                                     <action selector="onSignUpButton:" destination="6du-gQ-8j1" eventType="touchUpInside" id="GlW-Le-5cV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-fA-Jlc">
+                                <rect key="frame" x="20" y="50" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Z3z-q6-Mvn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1e-UT-epj">
-                                <rect key="frame" x="207" y="453" width="16" height="21"/>
+                                <rect key="frame" x="207" y="433" width="16" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -547,23 +573,84 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mg7-Pn-vhS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IZX-fA-Jlc" firstAttribute="centerX" secondItem="K4L-t7-NyI" secondAttribute="centerX" id="5BJ-XI-nXo"/>
+                            <constraint firstItem="IZX-fA-Jlc" firstAttribute="leading" secondItem="Mg7-Pn-vhS" secondAttribute="leading" constant="20" id="BhM-pJ-aXE"/>
+                            <constraint firstItem="Mg7-Pn-vhS" firstAttribute="trailing" secondItem="IZX-fA-Jlc" secondAttribute="trailing" constant="20" id="fCg-r5-Gn1"/>
+                            <constraint firstItem="IZX-fA-Jlc" firstAttribute="top" secondItem="Mg7-Pn-vhS" secondAttribute="top" constant="50" id="fPl-dh-Jir"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tnb-2R-Qb1"/>
                     <connections>
                         <outlet property="emailField" destination="qyz-8y-h2n" id="6rE-my-gkL"/>
+                        <outlet property="errorMessageLabel" destination="IZX-fA-Jlc" id="5rM-GD-kfT"/>
                         <outlet property="passwordField" destination="xa0-E7-SG3" id="0HH-E0-IQ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Xq-ic-K7n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="923"/>
+            <point key="canvasLocation" x="2759" y="1484"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="cHy-f3-YXd">
+            <objects>
+                <viewController id="e4T-gO-Ps6" customClass="AccountViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zFw-TL-SWk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5K-VQ-6r5">
+                                <rect key="frame" x="175" y="116" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQ0-2P-pQ1">
+                                <rect key="frame" x="183" y="343" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="e4T-gO-Ps6" eventType="touchUpInside" id="GKc-FT-f95"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuj-1L-XqL">
+                                <rect key="frame" x="40" y="184" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-pD-MfW">
+                                <rect key="frame" x="111" y="184" width="257" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XDU-2P-zEN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NKf-lX-W9R"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="bhn-pD-MfW" id="vMS-5i-l3U"/>
+                        <outlet property="logoutButton" destination="NQ0-2P-pQ1" id="yxZ-4T-JiW"/>
+                        <segue destination="6du-gQ-8j1" kind="show" identifier="accountToLogin" id="suI-Yj-VWn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="peR-Ro-A0s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2798.5507246376815" y="617.93478260869574"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dnr-NO-Xkx"/>
+        <segue reference="6Lx-Th-Rnm"/>
+        <segue reference="lZm-ko-A00"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="imageedit_1_6876702367" width="828" height="296"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

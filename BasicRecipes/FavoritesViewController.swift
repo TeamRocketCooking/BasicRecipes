@@ -10,8 +10,10 @@ import Parse
 import AlamofireImage
 
 class FavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var notLoggedInLabel: UILabel!
     
     var foods = [PFObject]()
     
@@ -21,33 +23,40 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
-        var savedFavorites = [String]()
-        
-        if let favoritesDefaults = UserDefaults.standard.array(forKey: "favorites") as? [String] {
-            savedFavorites = favoritesDefaults
-        }
-        
-        // LOAD THE FOOD DATA FROM THE SERVER
-        var parseObjects = [PFObject]()
-        for favoriteFood in savedFavorites {
-            parseObjects.append(PFObject.init(withoutDataWithClassName: "Food", objectId: favoriteFood))
-        }
-        
-        PFObject.fetchAll(inBackground: parseObjects) { (fetchedFoods, error) in
-            if let objects = fetchedFoods as? [PFObject] {
-                self.foods = objects
-            } else {
-                print("Invalid objectId stored in favorites array")
-            }
-            self.tableView.reloadData()
-        }
+        self.view.bringSubviewToFront(notLoggedInLabel)
     }
     
-    @IBAction func onLogoutButton(_ sender: Any) {
-        
-            PFUser.logOutInBackground()
-            // remember that the user logged out
-            UserDefaults.standard.set(false, forKey: "userLoggedIn")
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() == nil {
+            self.performSegue(withIdentifier: "favoritesToLogin", sender: nil)
+        }
+        refresh()
+    }
+    
+    func refresh() {
+        if PFUser.current() != nil {
+            notLoggedInLabel.text = ""
+            let objectIDs = PFUser.current()!["favorites"] as! [String]
+            print(objectIDs)
+            var parseObjects = [PFObject]()
+            
+            for id in objectIDs {
+                parseObjects.append(PFObject.init(withoutDataWithClassName: "Food", objectId: id))
+            }
+            
+            PFObject.fetchAll(inBackground: parseObjects) { (fetchedFoods, error) in
+                if let objects = fetchedFoods as? [PFObject] {
+                    self.foods = objects
+                } else {
+                    print("Invalid objectId stored in favorites array")
+                }
+                self.tableView.reloadData()
+            }
+        } else {
+            foods.removeAll()
+            notLoggedInLabel.text = "Please login to view favorites"
+            self.tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,20 +79,31 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        
-        // Pass the selected movie to the details view controller
-        let foodViewController = segue.destination as! FoodViewController
-        foodViewController.food = foods[indexPath.row]
-        
-        tableView.deselectRow(at: indexPath, animated: true)
+        if let cell = sender as? UITableViewCell {
+            let indexPath = tableView.indexPath(for: cell)!
+            
+            // Pass the selected movie to the details view controller
+            let foodViewController = segue.destination as! FoodViewController
+            foodViewController.food = foods[indexPath.row]
+            
+            tableView.deselectRow(at: indexPath, animated: true)
+        } else {
+            if let loginViewController = segue.destination as? LoginViewController {
+                loginViewController.refreshFavoritesClosure = {
+                    self.refresh()
+                }
+            } else if let accountViewController = segue.destination as? AccountViewController {
+                accountViewController.refreshFavoritesClosure = {
+                    self.refresh()
+                }
+            }
+        }
     }
-
+    
 }
