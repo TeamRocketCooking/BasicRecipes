@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class PreparationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
@@ -31,7 +32,14 @@ class PreparationViewController: UIViewController, UITableViewDataSource, UITabl
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
+        preparationImage.layer.masksToBounds = true
+        preparationImage.layer.borderWidth = 5
+        preparationImage.layer.borderColor = UIColor.white.cgColor
+        preparationImage.layer.cornerRadius = 25
+        
         preparationImage.af.setImage(withURL: url)
+        
+        
         
         let preparationSteps = preparation["steps"] as? [String]
         
