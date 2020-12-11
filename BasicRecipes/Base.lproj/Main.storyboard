@@ -54,7 +54,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="wp8-96-ecd" secondAttribute="bottom" id="qSk-uS-5lS"/>
                                                 <constraint firstItem="7oS-wc-Lg5" firstAttribute="leading" secondItem="4SG-7Z-bmO" secondAttribute="leading" id="vYo-Qg-LhL"/>
                                                 <constraint firstItem="QTz-1W-YsT" firstAttribute="top" secondItem="4SG-7Z-bmO" secondAttribute="topMargin" constant="10" id="vf3-GV-w0h"/>
-                                                <constraint firstAttribute="trailing" secondItem="wp8-96-ecd" secondAttribute="trailing" constant="-25" id="wtn-2u-AGR"/>
+                                                <constraint firstAttribute="trailing" secondItem="wp8-96-ecd" secondAttribute="trailing" id="wtn-2u-AGR"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="QTz-1W-YsT" secondAttribute="bottom" constant="10" id="xyI-LX-MZs"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -118,7 +118,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageedit_1_6876702367" translatesAutoresizingMaskIntoConstraints="NO" id="uDu-xk-pY5">
-                                                    <rect key="frame" x="-25" y="0.0" width="464" height="148"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -130,9 +130,9 @@
                                                 <constraint firstItem="fJD-T2-Nhr" firstAttribute="leading" secondItem="JTx-qC-CMN" secondAttribute="trailing" constant="10" id="aeu-Vf-M1u"/>
                                                 <constraint firstItem="JTx-qC-CMN" firstAttribute="top" secondItem="lgh-gs-0fL" secondAttribute="top" id="hLs-YR-g2W"/>
                                                 <constraint firstItem="fJD-T2-Nhr" firstAttribute="top" secondItem="lgh-gs-0fL" secondAttribute="topMargin" constant="10" id="hiC-Yh-Lbs"/>
-                                                <constraint firstAttribute="trailing" secondItem="uDu-xk-pY5" secondAttribute="trailing" constant="-25" id="lF3-N4-w4D"/>
+                                                <constraint firstAttribute="trailing" secondItem="uDu-xk-pY5" secondAttribute="trailing" id="lF3-N4-w4D"/>
                                                 <constraint firstItem="uDu-xk-pY5" firstAttribute="top" secondItem="lgh-gs-0fL" secondAttribute="top" id="lhB-dL-Fgn"/>
-                                                <constraint firstItem="uDu-xk-pY5" firstAttribute="leading" secondItem="lgh-gs-0fL" secondAttribute="leading" constant="-25" id="u2T-KL-9eW"/>
+                                                <constraint firstItem="uDu-xk-pY5" firstAttribute="leading" secondItem="lgh-gs-0fL" secondAttribute="leading" id="u2T-KL-9eW"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="fJD-T2-Nhr" secondAttribute="trailing" constant="10" id="x2A-1I-Omh"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -268,7 +268,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="enh-aU-eMJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CEG-HD-lmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="qoh-S4-ruL" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f0o-Z3-X3K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -280,6 +279,7 @@
                         <segue destination="zNy-vj-HIj" kind="relationship" relationship="viewControllers" id="RZ7-eI-Y0N"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEG-HD-lmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="19" y="166"/>
         </scene>
@@ -333,14 +333,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageedit_1_6876702367" translatesAutoresizingMaskIntoConstraints="NO" id="YxV-EQ-FTV">
-                                                    <rect key="frame" x="-25" y="0.0" width="439" height="153"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="JuN-OE-log" firstAttribute="top" secondItem="PBq-QA-7nm" secondAttribute="topMargin" constant="10" id="8YW-xV-nvt"/>
                                                 <constraint firstAttribute="trailing" secondItem="YxV-EQ-FTV" secondAttribute="trailing" id="9cr-4K-r2a"/>
                                                 <constraint firstItem="P3Q-Wi-Cmh" firstAttribute="top" secondItem="PBq-QA-7nm" secondAttribute="top" id="JBi-V2-M38"/>
-                                                <constraint firstItem="YxV-EQ-FTV" firstAttribute="leading" secondItem="PBq-QA-7nm" secondAttribute="leading" constant="-25" id="OZA-01-OVH"/>
+                                                <constraint firstItem="YxV-EQ-FTV" firstAttribute="leading" secondItem="PBq-QA-7nm" secondAttribute="leading" id="OZA-01-OVH"/>
                                                 <constraint firstItem="P3Q-Wi-Cmh" firstAttribute="leading" secondItem="PBq-QA-7nm" secondAttribute="leading" id="Sw8-NZ-feA"/>
                                                 <constraint firstAttribute="bottom" secondItem="YxV-EQ-FTV" secondAttribute="bottom" id="UJZ-gD-nvW"/>
                                                 <constraint firstItem="YxV-EQ-FTV" firstAttribute="top" secondItem="PBq-QA-7nm" secondAttribute="top" id="e67-et-TUr"/>
