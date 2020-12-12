@@ -28,6 +28,17 @@ class PreparationViewController: UIViewController, UITableViewDataSource, UITabl
         
         nameLabel.text = preparation["name"] as? String
         
+//        let attrString = NSAttributedString(
+//            string: preparation["name"] as? String ?? "Text",
+//            attributes: [
+//                NSAttributedString.Key.strokeColor: UIColor.white,
+//                //NSAttributedString.Key.foregroundColor: UIColor.white,
+//                NSAttributedString.Key.strokeWidth: 0,
+//                //NSAttributedString.Key.font: UIFont.systemFont(ofSize: 66.0)
+//            ]
+//        )
+//        nameLabel.attributedText = attrString
+        
         // Do any additional setup after loading the view.
         
         let imageFile = preparation["image"] as! PFFileObject
@@ -63,7 +74,7 @@ class PreparationViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "PreparationStepCell") as! PreparationStepCell
         
         let step = steps[indexPath.row]
-        cell.stepLabel.text = "\(indexPath.row + 1). " + step
+        cell.stepLabel.text = step //"\(indexPath.row + 1). " + step
         
         //cell.layer.masksToBounds = true
         cell.layer.borderWidth = 5

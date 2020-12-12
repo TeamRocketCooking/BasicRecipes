@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
+
+    
     
     
     var refreshFavoritesClosure: (() -> Void)?
@@ -30,6 +32,15 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.layer.masksToBounds = true
+        //loginButton.layer.borderWidth = 1
+        loginButton.layer.borderColor = UIColor.black.cgColor
+        loginButton.layer.cornerRadius = 25
+        
+        signUpButton.layer.masksToBounds = true
+        //signUpButton.layer.borderWidth = 1
+        signUpButton.layer.borderColor = UIColor.black.cgColor
+        signUpButton.layer.cornerRadius = 25
         
         // Do any additional setup after loading the view
     }
