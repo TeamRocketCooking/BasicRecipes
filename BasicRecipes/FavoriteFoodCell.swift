@@ -21,5 +21,21 @@ class FavoriteFoodCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    // code gotten from:
+    // https://stackoverflow.com/questions/47627658/spacing-between-uitableviewcells-swift3
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame =  newFrame
+            frame.origin.y += 4
+            frame.origin.x += 4
+            frame.size.height -= 2 * 2
+            frame.size.width -= 2 * 5
+            super.frame = frame
+        }
+      }
 
 }

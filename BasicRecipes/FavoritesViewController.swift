@@ -73,7 +73,17 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
+        cell.foodImage.layer.masksToBounds = true
+        cell.foodImage.layer.borderWidth = 5
+        cell.foodImage.layer.borderColor = UIColor.black.cgColor
+        cell.foodImage.layer.cornerRadius = 25
+        
         cell.foodImage.af.setImage(withURL: url)
+        
+        cell.layer.masksToBounds = true
+        cell.layer.borderWidth = 5
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.cornerRadius = 25
         
         return cell
     }

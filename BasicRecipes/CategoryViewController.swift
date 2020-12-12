@@ -49,6 +49,16 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
         cell.categoryImage.af.setImage(withURL: url)
         
+        cell.categoryImage.layer.masksToBounds = true
+        cell.categoryImage.layer.borderWidth = 5
+        cell.categoryImage.layer.borderColor = UIColor.black.cgColor
+        cell.categoryImage.layer.cornerRadius = 25
+        
+        cell.layer.masksToBounds = true
+        cell.layer.borderWidth = 5
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.cornerRadius = 25
+        
         return cell
     }
     

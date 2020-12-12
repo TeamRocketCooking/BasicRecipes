@@ -52,6 +52,16 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
+        cell.preparationImage.layer.masksToBounds = true
+        cell.preparationImage.layer.borderWidth = 5
+        cell.preparationImage.layer.borderColor = UIColor.black.cgColor
+        cell.preparationImage.layer.cornerRadius = 25
+        
+        cell.layer.masksToBounds = true
+        cell.layer.borderWidth = 5
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.cornerRadius = 25
+        
         cell.preparationImage.af.setImage(withURL: url)
         
         return cell

@@ -24,6 +24,7 @@ class PreparationViewController: UIViewController, UITableViewDataSource, UITabl
         
         stepsTable.delegate = self
         stepsTable.dataSource = self
+        stepsTable.rowHeight = 120
         
         nameLabel.text = preparation["name"] as? String
         // Do any additional setup after loading the view.
@@ -34,7 +35,7 @@ class PreparationViewController: UIViewController, UITableViewDataSource, UITabl
         
         preparationImage.layer.masksToBounds = true
         preparationImage.layer.borderWidth = 5
-        preparationImage.layer.borderColor = UIColor.white.cgColor
+        preparationImage.layer.borderColor = UIColor.black.cgColor
         preparationImage.layer.cornerRadius = 25
         
         preparationImage.af.setImage(withURL: url)
@@ -62,6 +63,11 @@ class PreparationViewController: UIViewController, UITableViewDataSource, UITabl
         
         let step = steps[indexPath.row]
         cell.stepLabel.text = "\(indexPath.row + 1). " + step
+        
+        //cell.layer.masksToBounds = true
+        cell.layer.borderWidth = 5
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.cornerRadius = 25
         
         return cell
     }
