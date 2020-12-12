@@ -24,18 +24,39 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.dataSource = self
         
         self.view.bringSubviewToFront(notLoggedInLabel)
+        
+        self.notLoggedInLabel.alpha = 0.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.notLoggedInLabel.alpha = 0.0
         if PFUser.current() == nil {
             self.performSegue(withIdentifier: "favoritesToLogin", sender: nil)
+            foods.removeAll()
+            self.tableView.reloadData()
+        } else {
+            let objectIDs = PFUser.current()!["favorites"] as! [String]
+            print(objectIDs)
+            var parseObjects = [PFObject]()
+            
+            for id in objectIDs {
+                parseObjects.append(PFObject.init(withoutDataWithClassName: "Food", objectId: id))
+            }
+            
+            PFObject.fetchAll(inBackground: parseObjects) { (fetchedFoods, error) in
+                if let objects = fetchedFoods as? [PFObject] {
+                    self.foods = objects
+                } else {
+                    print("Invalid objectId stored in favorites array")
+                }
+                self.tableView.reloadData()
+            }
         }
-        refresh()
     }
     
     func refresh() {
         if PFUser.current() != nil {
-            notLoggedInLabel.text = ""
+            loggedIn()
             let objectIDs = PFUser.current()!["favorites"] as! [String]
             print(objectIDs)
             var parseObjects = [PFObject]()
@@ -54,9 +75,19 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
             }
         } else {
             foods.removeAll()
-            notLoggedInLabel.text = "Please login to view favorites"
             self.tableView.reloadData()
         }
+    }
+    
+    func notLoggedIn() {
+        UIView.animate(withDuration: 0.35) {
+            self.notLoggedInLabel.alpha = 1.0
+        }
+        print("Not logged in")
+    }
+    
+    func loggedIn() {
+        self.notLoggedInLabel.alpha = 0.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,32 +119,31 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        
-        if let cell = sender as? UITableViewCell {
-            let indexPath = tableView.indexPath(for: cell)!
-            
-            // Pass the selected movie to the details view controller
-            let foodViewController = segue.destination as! FoodViewController
-            foodViewController.food = foods[indexPath.row]
-            
-            tableView.deselectRow(at: indexPath, animated: true)
-        } else {
-            if let loginViewController = segue.destination as? LoginViewController {
-                loginViewController.refreshFavoritesClosure = {
-                    self.refresh()
+        UIView.animate(withDuration: 0.35) {
+            self.loggedIn()
+        }
+        if let foodViewController = segue.destination as? FoodViewController {
+            if let cell = sender as? UITableViewCell {
+                if let indexPath = tableView.indexPath(for: cell) {
+                    foodViewController.food = foods[indexPath.row]
+                    tableView.deselectRow(at: indexPath, animated: true)
                 }
-            } else if let accountViewController = segue.destination as? AccountViewController {
-                accountViewController.refreshFavoritesClosure = {
-                    self.refresh()
-                }
+            }
+        } else if let loginViewController = segue.destination as? LoginViewController {
+            loginViewController.refreshFavoritesClosure = {
+                self.refresh()
+            }
+            loginViewController.alertNotLoggedInFavoritesClosure = {
+                self.notLoggedIn()
+            }
+        } else if let accountViewController = segue.destination as? AccountViewController {
+            accountViewController.refreshFavoritesClosure = {
+                self.refresh()
+            }
+            accountViewController.alertNotLoggedInFavoritesClosure = {
+                self.notLoggedIn()
             }
         }
     }
-    
 }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Food Categories-->
+        <!--Categories-->
         <scene sceneID="nVY-fl-G3o">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="1tU-g3-SV9" customClass="CategoryViewController" customModule="BasicRecipes" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +69,15 @@
                             <constraint firstItem="lmk-c6-Qf1" firstAttribute="trailing" secondItem="ARp-Ut-zQg" secondAttribute="trailing" id="u66-kO-uBA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Food Categories" id="W0x-FG-qtf"/>
+                    <navigationItem key="navigationItem" title="Categories" id="W0x-FG-qtf">
+                        <barButtonItem key="rightBarButtonItem" image="person.crop.circle" catalog="system" id="e6A-2o-ekd">
+                            <connections>
+                                <segue destination="e4T-gO-Ps6" kind="popoverPresentation" popoverAnchorBarButtonItem="e6A-2o-ekd" id="OmH-aS-vkh">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="lmk-c6-Qf1" id="ZnG-nL-F8v"/>
                     </connections>
@@ -110,6 +118,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98Z-CT-hja">
+                                                    <rect key="frame" x="282" y="95" width="30" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
+                                                    <color key="tintColor" systemColor="systemYellowColor"/>
+                                                    <connections>
+                                                        <action selector="toggleFavorite:" destination="fOl-18-oqT" eventType="touchUpInside" id="rBp-K7-ENW"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="JTx-qC-CMN" secondAttribute="bottom" id="6iQ-8W-Mxy"/>
@@ -123,6 +140,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="favoriteImage" destination="98Z-CT-hja" id="Zzi-xI-SPq"/>
                                             <outlet property="foodImage" destination="JTx-qC-CMN" id="rw1-cv-ioG"/>
                                             <outlet property="foodLabel" destination="fJD-T2-Nhr" id="mTX-id-Hro"/>
                                             <segue destination="JlL-lM-wBP" kind="show" id="dnr-NO-Xkx"/>
@@ -140,7 +158,15 @@
                             <constraint firstAttribute="bottom" secondItem="Yd6-5U-Srj" secondAttribute="bottom" id="mCG-Fa-5Nh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Foods" id="iz5-L6-J8z"/>
+                    <navigationItem key="navigationItem" title="Foods" id="iz5-L6-J8z">
+                        <barButtonItem key="rightBarButtonItem" image="person.crop.circle" catalog="system" id="a3t-c8-0dL">
+                            <connections>
+                                <segue destination="e4T-gO-Ps6" kind="popoverPresentation" popoverAnchorBarButtonItem="a3t-c8-0dL" id="u3b-Ww-olh">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Yd6-5U-Srj" id="95Q-Jx-ujy"/>
                     </connections>
@@ -157,7 +183,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dwadawdawdaw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEq-X0-SeM">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please login to view favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEq-X0-SeM">
                                 <rect key="frame" x="20" y="343" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="o4U-by-ic0"/>
@@ -341,7 +367,15 @@
                             <constraint firstItem="EIL-qH-UgA" firstAttribute="top" secondItem="66W-FS-DFH" secondAttribute="top" id="mvB-St-Qix"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Preparations" id="3df-cd-b9u"/>
+                    <navigationItem key="navigationItem" title="Preparations" id="3df-cd-b9u">
+                        <barButtonItem key="rightBarButtonItem" image="person.crop.circle" catalog="system" id="n6O-IR-8nV">
+                            <connections>
+                                <segue destination="e4T-gO-Ps6" kind="popoverPresentation" popoverAnchorBarButtonItem="n6O-IR-8nV" id="lfh-JM-03x">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="EIL-qH-UgA" id="csN-sM-axN"/>
                     </connections>
@@ -426,7 +460,15 @@
                             <constraint firstItem="Ntk-WI-T6C" firstAttribute="trailing" secondItem="bwt-QU-7kg" secondAttribute="trailing" id="wgz-kl-PYx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sIJ-7X-5Pk"/>
+                    <navigationItem key="navigationItem" id="sIJ-7X-5Pk">
+                        <barButtonItem key="rightBarButtonItem" image="person.crop.circle" catalog="system" id="ISv-e3-hVQ">
+                            <connections>
+                                <segue destination="e4T-gO-Ps6" kind="popoverPresentation" popoverAnchorBarButtonItem="ISv-e3-hVQ" id="38V-M7-xWU">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameLabel" destination="bwt-QU-7kg" id="fd1-LG-Jet"/>
                         <outlet property="preparationImage" destination="eHa-dZ-4cc" id="I4J-Dp-6aF"/>
@@ -548,7 +590,9 @@
                     <connections>
                         <outlet property="emailField" destination="qyz-8y-h2n" id="6rE-my-gkL"/>
                         <outlet property="errorMessageLabel" destination="IZX-fA-Jlc" id="5rM-GD-kfT"/>
+                        <outlet property="loginButton" destination="c5J-n7-Gbu" id="s8W-zB-UYj"/>
                         <outlet property="passwordField" destination="xa0-E7-SG3" id="0HH-E0-IQ0"/>
+                        <outlet property="signUpButton" destination="0x0-bk-zEL" id="VtI-fX-AgB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Xq-ic-K7n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -572,14 +616,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQ0-2P-pQ1">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQ0-2P-pQ1">
                                 <rect key="frame" x="0.0" y="191" width="414" height="525"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logout:" destination="e4T-gO-Ps6" eventType="touchUpInside" id="GKc-FT-f95"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuj-1L-XqL">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuj-1L-XqL">
                                 <rect key="frame" x="0.0" y="170" width="120" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Inj-bw-bBE"/>
@@ -602,28 +646,55 @@
                                 <rect key="frame" x="57" y="48" width="76" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to view your account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3d-de-LUk">
+                                <rect key="frame" x="20" y="333" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DbG-6e-3OE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9g-R7-gKB">
+                                <rect key="frame" x="0.0" y="191" width="414" height="525"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="e4T-gO-Ps6" eventType="touchUpInside" id="V0L-qX-xAs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XDU-2P-zEN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="y5K-VQ-6r5" firstAttribute="top" secondItem="XDU-2P-zEN" secondAttribute="top" id="02j-4c-OAq"/>
                             <constraint firstItem="XDU-2P-zEN" firstAttribute="bottom" secondItem="NQ0-2P-pQ1" secondAttribute="bottom" id="0cv-F9-BZ4"/>
+                            <constraint firstItem="z9g-R7-gKB" firstAttribute="bottom" secondItem="XDU-2P-zEN" secondAttribute="bottom" id="0yY-h0-WVh"/>
                             <constraint firstItem="NQ0-2P-pQ1" firstAttribute="top" secondItem="bhn-pD-MfW" secondAttribute="bottom" id="6Ku-Bt-Fo0"/>
                             <constraint firstItem="NQ0-2P-pQ1" firstAttribute="leading" secondItem="XDU-2P-zEN" secondAttribute="leading" id="7Ul-r1-eWM"/>
+                            <constraint firstItem="T3d-de-LUk" firstAttribute="centerY" secondItem="zFw-TL-SWk" secondAttribute="centerY" id="BRo-2j-Oa1"/>
                             <constraint firstItem="XDU-2P-zEN" firstAttribute="trailing" secondItem="y5K-VQ-6r5" secondAttribute="trailing" id="HXz-ZS-c1e"/>
                             <constraint firstItem="bhn-pD-MfW" firstAttribute="leading" secondItem="yuj-1L-XqL" secondAttribute="trailing" constant="25" id="KOC-dV-0fZ"/>
+                            <constraint firstItem="z9g-R7-gKB" firstAttribute="top" secondItem="yuj-1L-XqL" secondAttribute="bottom" id="Pj9-5F-ai6"/>
+                            <constraint firstItem="z9g-R7-gKB" firstAttribute="trailing" secondItem="XDU-2P-zEN" secondAttribute="trailing" id="R2O-6z-RLt"/>
+                            <constraint firstItem="z9g-R7-gKB" firstAttribute="leading" secondItem="XDU-2P-zEN" secondAttribute="leading" id="cau-bo-z8u"/>
                             <constraint firstItem="XDU-2P-zEN" firstAttribute="trailing" secondItem="bhn-pD-MfW" secondAttribute="trailing" id="fdO-g1-HT1"/>
                             <constraint firstItem="bhn-pD-MfW" firstAttribute="leading" secondItem="yuj-1L-XqL" secondAttribute="trailing" constant="25" id="igz-yB-6AV"/>
                             <constraint firstItem="XDU-2P-zEN" firstAttribute="trailing" secondItem="NQ0-2P-pQ1" secondAttribute="trailing" id="jFY-b3-oO6"/>
+                            <constraint firstItem="T3d-de-LUk" firstAttribute="centerX" secondItem="zFw-TL-SWk" secondAttribute="centerX" id="jrT-fZ-3uo"/>
                             <constraint firstItem="y5K-VQ-6r5" firstAttribute="leading" secondItem="XDU-2P-zEN" secondAttribute="leading" id="lCA-9d-HRg"/>
                             <constraint firstItem="yuj-1L-XqL" firstAttribute="leading" secondItem="XDU-2P-zEN" secondAttribute="leading" id="lr0-yX-Tf9"/>
+                            <constraint firstItem="XDU-2P-zEN" firstAttribute="trailing" secondItem="T3d-de-LUk" secondAttribute="trailing" constant="20" id="mrT-CP-E1I"/>
                             <constraint firstItem="bhn-pD-MfW" firstAttribute="top" secondItem="y5K-VQ-6r5" secondAttribute="bottom" id="oaZ-l7-J3k"/>
+                            <constraint firstItem="T3d-de-LUk" firstAttribute="leading" secondItem="XDU-2P-zEN" secondAttribute="leading" constant="20" id="qsO-84-Eqn"/>
                             <constraint firstItem="yuj-1L-XqL" firstAttribute="top" secondItem="y5K-VQ-6r5" secondAttribute="bottom" id="yvt-Zd-ryC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NKf-lX-W9R"/>
                     <connections>
+                        <outlet property="emailIndicatorLabel" destination="yuj-1L-XqL" id="OpP-DE-9jf"/>
                         <outlet property="emailLabel" destination="bhn-pD-MfW" id="vMS-5i-l3U"/>
+                        <outlet property="errorLabel" destination="T3d-de-LUk" id="LE2-eN-n4y"/>
+                        <outlet property="loginButton" destination="z9g-R7-gKB" id="2jz-wq-mmN"/>
                         <outlet property="logoutButton" destination="NQ0-2P-pQ1" id="yxZ-4T-JiW"/>
                         <segue destination="6du-gQ-8j1" kind="show" identifier="accountToLogin" id="suI-Yj-VWn"/>
                     </connections>
@@ -634,8 +705,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="38V-M7-xWU"/>
         <segue reference="6Lx-Th-Rnm"/>
-        <segue reference="lZm-ko-A00"/>
+        <segue reference="dnr-NO-Xkx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cuttingboard" width="25" height="25"/>
@@ -651,6 +723,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

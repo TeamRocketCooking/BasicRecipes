@@ -27,6 +27,7 @@ class PreparationViewController: UIViewController, UITableViewDataSource, UITabl
         stepsTable.rowHeight = 120
         
         nameLabel.text = preparation["name"] as? String
+        
         // Do any additional setup after loading the view.
         
         let imageFile = preparation["image"] as! PFFileObject

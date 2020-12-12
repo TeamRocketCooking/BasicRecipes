@@ -65,13 +65,15 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        
-        let foodSelectorViewController = segue.destination as! FoodSelectorViewController
-        foodSelectorViewController.category = categories[indexPath.row]
-        
-        tableView.deselectRow(at: indexPath, animated: true)
+        if let foodSelectorViewController = segue.destination as? FoodSelectorViewController {
+            if let cell = sender as? UITableViewCell {
+                if let indexPath = tableView.indexPath(for: cell) {
+                    foodSelectorViewController.category = categories[indexPath.row]
+            
+                    tableView.deselectRow(at: indexPath, animated: true)
+                }
+            }
+        }
     }
 
 }

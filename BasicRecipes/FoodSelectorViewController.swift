@@ -23,6 +23,7 @@ class FoodSelectorViewController: UIViewController, UITableViewDataSource, UITab
         tableView.dataSource = self
 
         // Do any additional setup after loading the view.
+        
         let query = PFQuery(className:"Food")
         query.whereKey("category", equalTo: category.objectId!)
         query.findObjectsInBackground {( fetchedFoods: [PFObject]?, error: Error? ) in
@@ -48,6 +49,24 @@ class FoodSelectorViewController: UIViewController, UITableViewDataSource, UITab
         let imageFile = food["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
+        let objectId = food.objectId!
+        cell.objectId = objectId
+        
+        if PFUser.current() != nil {
+            let favorites = PFUser.current()!["favorites"] as! [String]
+            var favorited = false
+            if favorites.firstIndex(of: objectId) != nil {
+                favorited = true
+            }
+            
+            if (favorited) {
+                cell.favoriteImage.setImage(UIImage(systemName: "star.fill")!.withTintColor(UIColor.systemYellow, renderingMode: .alwaysTemplate), for: .normal)
+                cell.isFavorited = true
+            } else {
+                cell.favoriteImage.setImage(UIImage(systemName: "star")!.withTintColor(UIColor.systemYellow, renderingMode: .alwaysTemplate), for: .normal)
+                cell.isFavorited = false
+            }
+        }
         
         cell.foodImage.layer.masksToBounds = true
         cell.foodImage.layer.borderWidth = 5
@@ -71,14 +90,18 @@ class FoodSelectorViewController: UIViewController, UITableViewDataSource, UITab
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        
-        // Pass the selected movie to the details view controller
-        let foodViewController = segue.destination as! FoodViewController
-        foodViewController.food = foods[indexPath.row]
-        
-        tableView.deselectRow(at: indexPath, animated: true)
+        if let foodViewController = segue.destination as? FoodViewController {
+            if let cell = sender as? UITableViewCell {
+                if let indexPath = tableView.indexPath(for: cell) {
+                    foodViewController.food = foods[indexPath.row]
+                    
+                    tableView.deselectRow(at: indexPath, animated: true)
+                }
+            }
+        } else if let accountViewController = segue.destination as? AccountViewController {
+            accountViewController.refreshFoodClosure = { self.tableView.reloadData()
+            }
+        }
     }
     
 

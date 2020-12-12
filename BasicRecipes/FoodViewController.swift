@@ -74,13 +74,16 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
         
-        let preparationViewController = segue.destination as! PreparationViewController
-        preparationViewController.preparation = preparations[indexPath.row]
-        
-        tableView.deselectRow(at: indexPath, animated: true)
+        if let preparationViewController = segue.destination as? PreparationViewController {
+            if let cell = sender as? UITableViewCell {
+                if let indexPath = tableView.indexPath(for: cell) {
+                    preparationViewController.preparation = preparations[indexPath.row]
+                    
+                    tableView.deselectRow(at: indexPath, animated: true)
+                }
+            }
+        }
     }
     
 
