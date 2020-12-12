@@ -104,6 +104,26 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
+        let objectId = food.objectId!
+        
+        cell.objectId = objectId
+        
+        if PFUser.current() != nil {
+            let favorites = PFUser.current()!["favorites"] as! [String]
+            var favorited = false
+            if favorites.firstIndex(of: objectId) != nil {
+                favorited = true
+            }
+            
+            if (favorited) {
+                cell.favoriteImage.setImage(UIImage(systemName: "star.fill")!.withTintColor(UIColor.systemYellow, renderingMode: .alwaysTemplate), for: .normal)
+                cell.isFavorited = true
+            } else {
+                cell.favoriteImage.setImage(UIImage(systemName: "star")!.withTintColor(UIColor.systemYellow, renderingMode: .alwaysTemplate), for: .normal)
+                cell.isFavorited = false
+            }
+        }
+        
         cell.foodImage.layer.masksToBounds = true
         cell.foodImage.layer.borderWidth = 5
         cell.foodImage.layer.borderColor = UIColor.black.cgColor

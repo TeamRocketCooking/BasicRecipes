@@ -217,10 +217,19 @@
                                                     <color key="textColor" red="0.24356919530000001" green="0.54953205589999998" blue="0.67452871800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sf-OS-odg">
+                                                    <rect key="frame" x="343" y="16" width="25" height="25"/>
+                                                    <color key="tintColor" systemColor="systemYellowColor"/>
+                                                    <connections>
+                                                        <action selector="toggleFavorite:" destination="27d-PB-rx9" eventType="touchUpInside" id="1hV-tk-vRB"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="So4-8K-Q1b" secondAttribute="trailing" constant="10" id="41a-0c-yFC"/>
                                                 <constraint firstItem="QgX-Lt-1qm" firstAttribute="leading" secondItem="TAY-01-k1m" secondAttribute="leading" id="BtS-cw-Cag"/>
+                                                <constraint firstItem="1sf-OS-odg" firstAttribute="trailing" secondItem="TAY-01-k1m" secondAttribute="trailingMargin" id="Myv-5z-cfR"/>
+                                                <constraint firstItem="1sf-OS-odg" firstAttribute="top" secondItem="TAY-01-k1m" secondAttribute="topMargin" id="baV-Ud-WHL"/>
                                                 <constraint firstItem="So4-8K-Q1b" firstAttribute="leading" secondItem="QgX-Lt-1qm" secondAttribute="trailing" constant="10" id="dP7-q8-ieN"/>
                                                 <constraint firstItem="So4-8K-Q1b" firstAttribute="leading" secondItem="QgX-Lt-1qm" secondAttribute="trailing" constant="10" id="eQI-8W-Zaa"/>
                                                 <constraint firstAttribute="bottom" secondItem="QgX-Lt-1qm" secondAttribute="bottom" id="esU-F1-ood"/>
@@ -230,6 +239,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="favoriteImage" destination="1sf-OS-odg" id="JGe-JM-Jhb"/>
                                             <outlet property="foodImage" destination="QgX-Lt-1qm" id="Fit-G7-e5p"/>
                                             <outlet property="foodLabel" destination="So4-8K-Q1b" id="hw1-uE-jph"/>
                                             <segue destination="JlL-lM-wBP" kind="show" id="lZm-ko-A00"/>
