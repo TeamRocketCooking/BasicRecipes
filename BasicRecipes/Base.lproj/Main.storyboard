@@ -484,7 +484,7 @@
         <scene sceneID="Xnd-IT-oal">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zNy-vj-HIj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="suit.heart" catalog="system" id="Eft-Ot-Hp4"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" id="Eft-Ot-Hp4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oAt-Zb-Ih6">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -714,7 +714,7 @@
         <image name="cuttingboard" width="25" height="25"/>
         <image name="cuttingboardlarge" width="1275" height="1394"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
-        <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <image name="title" width="421" height="75"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
