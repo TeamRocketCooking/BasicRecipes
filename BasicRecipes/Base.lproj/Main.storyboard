@@ -217,8 +217,8 @@
                                                     <color key="textColor" red="0.24356919530000001" green="0.54953205589999998" blue="0.67452871800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sf-OS-odg">
-                                                    <rect key="frame" x="343" y="16" width="25" height="25"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sf-OS-odg">
+                                                    <rect key="frame" x="340" y="11" width="30" height="34"/>
                                                     <color key="tintColor" systemColor="systemYellowColor"/>
                                                     <connections>
                                                         <action selector="toggleFavorite:" destination="27d-PB-rx9" eventType="touchUpInside" id="1hV-tk-vRB"/>
@@ -233,9 +233,11 @@
                                                 <constraint firstItem="So4-8K-Q1b" firstAttribute="leading" secondItem="QgX-Lt-1qm" secondAttribute="trailing" constant="10" id="dP7-q8-ieN"/>
                                                 <constraint firstItem="So4-8K-Q1b" firstAttribute="leading" secondItem="QgX-Lt-1qm" secondAttribute="trailing" constant="10" id="eQI-8W-Zaa"/>
                                                 <constraint firstAttribute="bottom" secondItem="QgX-Lt-1qm" secondAttribute="bottom" id="esU-F1-ood"/>
+                                                <constraint firstItem="1sf-OS-odg" firstAttribute="top" secondItem="TAY-01-k1m" secondAttribute="topMargin" id="f4C-VC-NZX"/>
                                                 <constraint firstItem="QgX-Lt-1qm" firstAttribute="top" secondItem="TAY-01-k1m" secondAttribute="top" id="faG-E1-RMh"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="So4-8K-Q1b" secondAttribute="bottom" constant="10" id="j6P-qf-2ym"/>
                                                 <constraint firstItem="So4-8K-Q1b" firstAttribute="top" secondItem="TAY-01-k1m" secondAttribute="topMargin" constant="10" id="leQ-gZ-VMB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1sf-OS-odg" secondAttribute="trailing" id="vQ8-5u-XNV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
