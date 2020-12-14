@@ -10,6 +10,10 @@
 ### App Walkthrough GIF
 Here's a walkthrough of the current application:
 
+Unit 12
+
+![](Guide4.gif)![](Guide5.gif)
+
 Unit 11
 
 ![](Guide3.gif)
@@ -48,12 +52,12 @@ People who are new to cooking, or who cook rarely and need clear and concise coo
 
 **Required Must-have Stories**
 
-- [] List of items you can learn to cook, and their tutorials
-- [] User can favorite foods
+- [x] List of items you can learn to cook, at least one food completed (broccoli)
+- [x] User can favorite foods
 - [x] App has category, food, and favorite page
 - [x] App successfully use back4app parse server for data
-- [ ] User stays logged in across restarts
-- [ ] User can log out
+- [x] User stays logged in across restarts
+- [x] User can log out
 - [x] User select food types
 - [x] User can select specific foods
 
