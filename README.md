@@ -12,7 +12,7 @@ Here's a walkthrough of the current application:
 
 Unit 12
 
-![](Guide4.gif)![](Guide5.gif)
+![](AppDemo.gif)![](LoginExample.gif)
 
 Unit 11
 
